@@ -8,7 +8,7 @@ import Header from './components/Header';
 import Footer from './components/Footer'
 
 /* Importación de las secciones */
-import Home from "./pages/Home"
+import Inicio from "./pages/Inicio"
 import Productos from "./pages/Productos"
 import Carrito from "./pages/Carrito"
 
@@ -19,7 +19,7 @@ function App() {
             <Header/>
             <Container>
                 <Routes>
-                    <Route path='/' element={<Home/>}/>
+                    <Route path='/' element={<Inicio/>}/>
                     <Route path='/productos' element={<Productos/>}/>
                     <Route path='/carrito' element={<Carrito/>}/>
                 </Routes>
