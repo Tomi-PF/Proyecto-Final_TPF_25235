@@ -21,7 +21,6 @@ export default function Carrousel(){
 
         if(indiceNuevo < 0){
             indiceNuevo = cantidadImagenes - 1
-
         }else if(indiceNuevo >= cantidadImagenes){
             indiceNuevo = 0
         }
@@ -41,7 +40,6 @@ export default function Carrousel(){
     return(
         <div className="carousel">
             <div className="carousel-images" style={{ transform: `translateX(${-indiceActual * 100}%)` }}>
-                {/* <img src="img/MardelPlata.jpg" alt="Imagen 1"/> */}
                 {
                     productos.map((prod) => (
                         <img key={prod.id} src={prod.images[0]} alt={prod.title}/>
