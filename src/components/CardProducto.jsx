@@ -14,7 +14,7 @@ export default function CardProducto({id, nombre, descripcion, foto, precio, est
 
     return(
         <Card key={id} style={{ width: '18rem', marginTop:"10px" }}>
-            <Card.Img variant="top" src={foto} />
+            <Card.Img variant="top" src={foto} alt={nombre} />
             <Card.Body>
                 <Card.Title>{nombre}</Card.Title>
                 <Card.Text>{descripcion}</Card.Text>
