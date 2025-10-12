@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Swal from 'sweetalert2'
 
 export default function Carrousel(){
     
@@ -12,7 +13,13 @@ export default function Carrousel(){
         .then((p) => {
             setProductos(p.products)
         })
-        .catch((error) => window.alert("Error al cargar las fotos de los productos", error))
+        .catch(() => {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Error al cargar las fotos de los productos"
+            });
+        })
     },[])
 
     const cambiarImagen = (direccion) => {
