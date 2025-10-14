@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
+import {Spinner} from "react-bootstrap"
 import Swal from 'sweetalert2';
 import CardProducto from "../components/CardProducto"
-import {Spinner} from "react-bootstrap"
 
 export default function Cards({categoria}){
     
