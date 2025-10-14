@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Swal from 'sweetalert2';
 import CardProducto from "../components/CardProducto"
+import {Spinner} from "react-bootstrap"
 
 export default function Cards({categoria}){
     
@@ -27,6 +28,12 @@ export default function Cards({categoria}){
             buscarProductos(categoria);
         }
     }, [categoria]);
+
+    if(!productos){
+        return(
+            <Spinner animation="border" role="status"/>
+        )
+    }
 
     return(
         <div className="productos-container">
