@@ -18,7 +18,7 @@ import Login from "./pages/Login"
 function App() {
 
     return (
-        <Router>
+        <Router basename='/Proyecto-Final_TPF_25235'>
             <Header/>
             <Container>
                 <Routes>
