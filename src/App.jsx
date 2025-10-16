@@ -1,30 +1,41 @@
-import { useState } from 'react'
-import Logo from'./assets/Logo.jpg'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+
+/* Importación de los componentes */
+import Header from './components/Header';
+import Footer from './components/Footer'
+import RutaProtegida from './components/RutaProtegida';
+
+/* Importación de las secciones */
+import Inicio from "./pages/Inicio"
+import Productos from "./pages/Productos"
+import Carrito from "./pages/Carrito"
+import Usuario from "./pages/Usuario"
+import Login from "./pages/Login"
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={Logo} className="logo" alt="Vite logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    return (
+        <Router>
+            <Header/>
+            <Container>
+                <Routes>
+                    <Route path='/' element={<Inicio/>}/>
+                    <Route path='/productos' element={<Productos/>}/>
+                    <Route path='/carrito' element={<Carrito/>}/>
+                    <Route path='/perfil' element={
+                        <RutaProtegida>
+                            <Usuario/>
+                        </RutaProtegida>
+                    }/>
+                    <Route path='/login' element={<Login/>}/>
+                </Routes>
+            </Container>
+            <Footer/>
+        </Router>
+    )
 }
 
 export default App
