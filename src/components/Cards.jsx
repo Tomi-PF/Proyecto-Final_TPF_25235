@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import {Spinner} from "react-bootstrap"
-import Swal from 'sweetalert2';
 import CardProducto from "../components/CardProducto"
+import { mostrarAlertaError } from "./Mensajes"
 
 export default function Cards({categoria}){
     
@@ -14,11 +14,7 @@ export default function Cards({categoria}){
             setProductos(prods.products)
         })
         .catch(() => {
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Error al cargar los productos"
-            });
+            mostrarAlertaError("Error al cargar los productos")
         })
     }
 
