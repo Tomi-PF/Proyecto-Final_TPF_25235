@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Form } from "react-bootstrap";
-import Swal from 'sweetalert2';
+import { mostrarAlertaError } from "./Mensajes";
 
 export default function Selector({setCategoria, categorias, setCategorias}){
 
@@ -11,23 +11,15 @@ export default function Selector({setCategoria, categorias, setCategorias}){
             setCategorias(cat)
         })
         .catch(() => {
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Error al cargar las categorias de los productos"
-            });
+            mostrarAlertaError("Error al cargar las categorias de los productos")
         })
     },[])
-
-    const cambiarOpcion = (e) => {
-        setCategoria(e.target.value)
-    }
 
     return(
         <Form.Select 
             aria-label="Default select example" 
             style={{marginTop: "40px", marginBottom: "20px"}} 
-            onChange={cambiarOpcion}
+            onChange={(e) => setCategoria(e.target.value)}
         >
             <option disabled>Open this select menu</option>
             {
