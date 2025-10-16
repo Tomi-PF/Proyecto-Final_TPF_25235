@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import {Spinner} from "react-bootstrap"
-import CardProducto from "../components/CardProducto"
+import CardProducto from "./CardProducto"
 import { mostrarAlertaError } from "./Mensajes"
 
 export default function Cards({categoria}){
