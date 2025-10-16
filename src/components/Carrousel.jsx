@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Swal from 'sweetalert2'
+import { mostrarAlertaError } from "./Mensajes";
 
 export default function Carrousel(){
     
@@ -14,11 +14,7 @@ export default function Carrousel(){
             setProductos(p.products)
         })
         .catch(() => {
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Error al cargar las fotos de los productos"
-            });
+            mostrarAlertaError("Error al cargar las fotos de los productos")
         })
     },[])
 
