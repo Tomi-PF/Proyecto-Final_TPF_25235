@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import {Spinner} from "react-bootstrap"
 import CardProducto from "./CardProducto"
 import { mostrarAlertaError } from "./Mensajes"
 
@@ -22,9 +21,9 @@ export default function Cards(){
         obtenerProductos();
     }, []);
 
-    if(!productos){
+    if(productos.length == 0){
         return(
-            <Spinner animation="border" role="status"/>
+            <h2 className="mt-5">No hay productos para ofrecer a la venta</h2>
         )
     }
 
