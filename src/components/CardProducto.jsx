@@ -10,14 +10,14 @@ export default function CardProducto({producto}){
 
     return(
         <Card key={producto.id} style={{ width: '18rem', marginTop:"10px" }}>
-            <Card.Img variant="top" src={producto.thumbnail} alt={producto.title} />
+            <Card.Img variant="top" src={producto.imagen} alt={producto.nombre} />
             <Card.Body>
-                <Card.Title>{producto.title}</Card.Title>
-                <Card.Text>{producto.description}</Card.Text>
+                <Card.Title>{producto.nombre}</Card.Title>
+                <Card.Text>{producto.descripcion}</Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-                <ListGroup.Item>Precio: <b>${producto.price}</b></ListGroup.Item>
-                <ListGroup.Item>Estrellas: <b>{producto.rating}</b></ListGroup.Item>
+                <ListGroup.Item>Precio: <b>${producto.precio}</b></ListGroup.Item>
+                <ListGroup.Item>Estrellas: <b>{producto.estrellas}</b></ListGroup.Item>
             </ListGroup>
             <Card.Body>
                 <Boton variante={"primary"} texto={"Agregar al carrito"} funcion={mensaje}/>

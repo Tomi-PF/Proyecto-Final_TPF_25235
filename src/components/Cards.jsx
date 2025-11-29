@@ -3,15 +3,15 @@ import {Spinner} from "react-bootstrap"
 import CardProducto from "./CardProducto"
 import { mostrarAlertaError } from "./Mensajes"
 
-export default function Cards({categoria}){
+export default function Cards(){
     
     const [productos, setProductos] = useState([])
 
-    const buscarProductos = (categoria) => {
-        fetch(`https://dummyjson.com/products/category/${categoria}`)
+    const obtenerProductos = () => {
+        fetch('https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos')
         .then((res) => res.json())
-        .then((prods) => {
-            setProductos(prods.products)
+        .then((productos) => {
+            setProductos(productos)
         })
         .catch(() => {
             mostrarAlertaError("Error al cargar los productos")
@@ -19,11 +19,8 @@ export default function Cards({categoria}){
     }
 
     useEffect(() => {
-        setProductos([]);
-        if(categoria){
-            buscarProductos(categoria);
-        }
-    }, [categoria]);
+        obtenerProductos();
+    }, []);
 
     if(!productos){
         return(
