@@ -36,13 +36,14 @@ export default function Cards({categoria}){
             {
                 productos.map((p) => (
                     <CardProducto 
-                        key={p.id}
-                        id={p.id} 
-                        nombre={p.title} 
-                        descripcion={p.description}
-                        foto={p.thumbnail}
-                        precio={p.price}
-                        estrellas={p.rating}
+                        // key={p.id}
+                        // id={p.id} 
+                        // nombre={p.title} 
+                        // descripcion={p.description}
+                        // foto={p.thumbnail}
+                        // precio={p.price}
+                        // estrellas={p.rating}
+                        producto={p}
                     />
                 ))
             }
