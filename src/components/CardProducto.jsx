@@ -17,7 +17,6 @@ export default function CardProducto({producto}){
             </Card.Body>
             <ListGroup className="list-group-flush">
                 <ListGroup.Item>Precio: <b>${producto.precio}</b></ListGroup.Item>
-                <ListGroup.Item>Estrellas: <b>{producto.estrellas}</b></ListGroup.Item>
             </ListGroup>
             <Card.Body>
                 <Boton variante={"primary"} texto={"Agregar al carrito"} funcion={mensaje}/>
