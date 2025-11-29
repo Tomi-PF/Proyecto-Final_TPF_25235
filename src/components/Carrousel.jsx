@@ -40,7 +40,7 @@ export default function Carrousel(){
         return () => clearInterval(intervalo)
     },[indiceActual])
 
-    if(productos.length != 0) {
+    if(productos.length != 0){
         return(
             <div className="carousel">
                 <div className="carousel-images" style={{ transform: `translateX(${-indiceActual * 100}%)`}}>
