@@ -5,9 +5,10 @@ import { mostrarAlertaError } from "./Mensajes"
 export default function Cards(){
     
     const [productos, setProductos] = useState([])
+    const API_URL="https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
 
     const obtenerProductos = () => {
-        fetch('https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos')
+        fetch(API_URL)
         .then((res) => res.json())
         .then((productos) => {
             setProductos(productos)
