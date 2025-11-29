@@ -22,7 +22,6 @@ export default function Login(){
 
             mostrarAlertaExito("Iniciado sesión correctamente")
             localStorage.setItem('auth', 'true')
-            localStorage.setItem('user', usuario)
             navigate('/')
 
         }else if(esValidoContraseña){
