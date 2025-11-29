@@ -22,11 +22,14 @@ function Header() {
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/" className="text-white">Inicio</Nav.Link>
                         <Nav.Link as={Link} to="/productos" className="text-white">Productos</Nav.Link>
-                        {estaAutenticado && (
-                            <Nav.Link as={Link} to="/perfil" className="text-white">Perfil</Nav.Link>
-                        )}
                     </Nav>
                     <Nav>
+                        {estaAutenticado && (
+                            <Nav.Link as={Link} to="/administracion" className="text-white d-flex align-items-center">
+                                <ion-icon size="large" name="settings-outline"></ion-icon>
+                                <span className="ms-1">Administración</span>
+                            </Nav.Link>
+                        )}
                         <Nav.Link as={Link} to="/carrito" className="text-white d-flex align-items-center">
                             <ion-icon size="large" name="cart-outline"></ion-icon>
                             <span className="ms-1">Carrito</span>

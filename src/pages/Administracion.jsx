@@ -6,8 +6,7 @@ export default function Usuario(){
 
     return(
         <Container className="mt-4">
-            <h1>Perfil de usuario</h1>
-            <h2><b>Usuario:</b> {nombreUsuario}</h2>
+            <h1>Sección de administración</h1>
         </Container>
     )
 }
