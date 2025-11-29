@@ -15,7 +15,7 @@ export default function Carrousel(){
             setProductos(productos)
         })
         .catch(() => {
-            mostrarAlertaError("Error al cargar las fotos de los productos")
+            mostrarAlertaError("Error al cargar los productos")
         })
     },[])
 
