@@ -79,7 +79,7 @@ export default function Administracion(){
     }
 
     const eliminarProducto = (id) => {
-        confirmarEleccion("Desea eliminar el producto?", "Eliminar").then((confirmado) => {
+        confirmarEleccion("¿Desea eliminar el producto?", "Eliminar").then((confirmado) => {
             if(confirmado){
                 fetch(`${API_URL}/${id}`, {
                     method: "DELETE"
