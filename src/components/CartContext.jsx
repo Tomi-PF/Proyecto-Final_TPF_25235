@@ -28,7 +28,11 @@ export const CartProvider = ({ children }) => {
     }
 
     const vaciarCarrito = () => {
-        setCarrito([])
+        confirmarEleccion("¿Desea vaciar el carrito?", "Vaciar").then((confirmado) => {
+            if(confirmado){
+                setCarrito([])
+            }
+        })
     }
 
     return(
