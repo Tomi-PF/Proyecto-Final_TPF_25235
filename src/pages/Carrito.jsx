@@ -5,7 +5,7 @@ import Boton from "../components/Boton"
 
 export default function Carrito(){
 
-    const { carrito, eliminarCarrito } = useContext(CartContext)
+    const { carrito, eliminarCarrito, vaciarCarrito } = useContext(CartContext)
     const total = carrito.reduce((acc, item) => acc + Number(item.precio) * item.cantidad, 0)
 
     if(carrito.length === 0){
@@ -19,14 +19,15 @@ export default function Carrito(){
     return(
         <Container className="mt-4">
             <h3>Carrito de compras</h3>
+            <Boton variante={"danger"} texto={"Vaciar carrito"} funcion={() => vaciarCarrito()}/>
             <Table striped bordered hover responsive className="mt-3">
                 <thead>
-                    <tr>
+                    <tr style={{textAlign: "center"}}>
                         <th>Producto</th>
                         <th>Precio unitario</th>
                         <th>Cantidad</th>
                         <th>Total</th>
-                        <th></th>
+                        <th>Acción</th>
                     </tr>
                 </thead>
                 <tbody>
