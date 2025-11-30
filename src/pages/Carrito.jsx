@@ -24,6 +24,7 @@ export default function Carrito(){
                 <thead>
                     <tr style={{textAlign: "center"}}>
                         <th>Producto</th>
+                        <th>Imagen</th>
                         <th>Precio unitario</th>
                         <th>Cantidad</th>
                         <th>Total</th>
@@ -36,6 +37,15 @@ export default function Carrito(){
                             return(
                                 <tr key={prod.id}>
                                     <td>{prod.nombre}</td>
+                                    <td>
+                                        <img 
+                                            src={prod.imagen} 
+                                            alt={prod.nombre}
+                                            width={50}
+                                            height={50}
+                                            style={{objectFit: "cover"}} 
+                                        />
+                                    </td>
                                     <td>${Number(prod.precio).toFixed(2)}</td>
                                     <td>{prod.cantidad}</td>
                                     <td>${(Number(prod.precio) * prod.cantidad).toFixed(2)}</td>
