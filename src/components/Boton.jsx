@@ -6,8 +6,7 @@ export default function Boton({variante, texto, funcion}){
         <Button 
             variant={variante} 
             size="lg" 
-            onClick={funcion} 
-            style={{width:"100%"}}
+            onClick={funcion}
         >{texto}</Button>
     )
 }
