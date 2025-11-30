@@ -1,4 +1,5 @@
 import { useState, useEffect, useContext } from "react"
+import { Form } from "react-bootstrap"
 import CardProducto from "./CardProducto"
 import { mostrarAlertaError } from "./Mensajes"
 import { CartContext } from "./CartContext"
@@ -6,6 +7,7 @@ import { CartContext } from "./CartContext"
 export default function Cards(){
     
     const [productos, setProductos] = useState([])
+    const [barraBusqueda, setBarraBusqueda] = useState("")
     const { agregarCarrito } = useContext(CartContext)
     const API_URL="https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
 
@@ -20,6 +22,11 @@ export default function Cards(){
         })
     }
 
+    const productosFiltrados = productos.filter(producto => 
+        producto.nombre.toLowerCase().includes(barraBusqueda.toLowerCase()) || 
+        producto.descripcion.toLowerCase().includes(barraBusqueda.toLowerCase())
+    )
+
     useEffect(() => {
         obtenerProductos();
     }, []);
@@ -31,12 +38,22 @@ export default function Cards(){
     }
 
     return(
-        <div className="productos-container">
-            {
-                productos.map((p) => (
-                    <CardProducto producto={p} agregarCarrito={agregarCarrito}/>
-                ))
-            }
-        </div>
+        <span>
+            <Form.Control
+                type="text"
+                placeholder="Buscar un producto"
+                className="mb-4 mt-4"
+                value={barraBusqueda}
+                onChange={(e) => setBarraBusqueda(e.target.value)}
+            />
+
+            <div className="productos-container">
+                {
+                    productosFiltrados.map((p) => (
+                        <CardProducto producto={p} agregarCarrito={agregarCarrito}/>
+                    ))
+                }
+            </div>
+        </span>
     )
 }
