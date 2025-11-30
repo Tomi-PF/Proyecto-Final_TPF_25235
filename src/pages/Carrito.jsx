@@ -62,7 +62,7 @@ export default function Carrito(){
                     }
                 </tbody>
             </Table>
-            <h5 className="text-end">Total a pagar: <b>{total.toFixed(2)}</b></h5>
+            <h5 className="text-end">Total a pagar: <b>${total.toFixed(2)}</b></h5>
         </Container>
     )
 }
