@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import CardProducto from "./CardProducto"
 import { mostrarAlertaError } from "./Mensajes"
+import { CartContext } from "./CartContext"
 
 export default function Cards(){
     
     const [productos, setProductos] = useState([])
+    const { agregarCarrito } = useContext(CartContext)
     const API_URL="https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
 
     const obtenerProductos = () => {
@@ -32,7 +34,7 @@ export default function Cards(){
         <div className="productos-container">
             {
                 productos.map((p) => (
-                    <CardProducto producto={p}/>
+                    <CardProducto producto={p} agregarCarrito={agregarCarrito}/>
                 ))
             }
         </div>

@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer'
 import RutaProtegida from './components/RutaProtegida';
+import { CartProvider } from './components/CartContext';
 
 /* Importación de las secciones */
 import Inicio from "./pages/Inicio"
@@ -18,23 +19,25 @@ import Login from "./pages/Login"
 function App() {
 
     return (
-        <Router basename='/Proyecto-Final_TPF_25235'>
-            <Header/>
-            <Container>
-                <Routes>
-                    <Route path='/' element={<Inicio/>}/>
-                    <Route path='/productos' element={<Productos/>}/>
-                    <Route path='/carrito' element={<Carrito/>}/>
-                    <Route path='/administracion' element={
-                        <RutaProtegida>
-                            <Administracion/>
-                        </RutaProtegida>
-                    }/>
-                    <Route path='/login' element={<Login/>}/>
-                </Routes>
-            </Container>
-            <Footer/>
-        </Router>
+        <CartProvider>
+            <Router basename='/Proyecto-Final_TPF_25235'>
+                <Header/>
+                <Container>
+                    <Routes>
+                        <Route path='/' element={<Inicio/>}/>
+                        <Route path='/productos' element={<Productos/>}/>
+                        <Route path='/carrito' element={<Carrito/>}/>
+                        <Route path='/administracion' element={
+                            <RutaProtegida>
+                                <Administracion/>
+                            </RutaProtegida>
+                        }/>
+                        <Route path='/login' element={<Login/>}/>
+                    </Routes>
+                </Container>
+                <Footer/>
+            </Router>
+        </CartProvider>
     )
 }
 

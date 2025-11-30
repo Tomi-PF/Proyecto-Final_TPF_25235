@@ -2,9 +2,10 @@ import { Card, ListGroup } from 'react-bootstrap'
 import Boton from './Boton'
 import { mostrarAlertaExito } from './Mensajes'
 
-export default function CardProducto({producto}){
+export default function CardProducto({producto, agregarCarrito}){
 
-    const mensaje = () => {
+    const agregar = (producto) => {
+        agregarCarrito(producto)
         mostrarAlertaExito("Producto agregado al carrito correctamente")
     }
 
@@ -19,7 +20,7 @@ export default function CardProducto({producto}){
                 <ListGroup.Item>Precio: <b>${producto.precio}</b></ListGroup.Item>
             </ListGroup>
             <Card.Body>
-                <Boton variante={"primary"} texto={"Agregar al carrito"} funcion={mensaje}/>
+                <Boton variante={"primary"} texto={"Agregar al carrito"} funcion={() => agregar(producto)}/>
             </Card.Body>
         </Card>
     )    
