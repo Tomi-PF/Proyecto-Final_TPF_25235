@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import {Form, Button} from "react-bootstrap"
+import { Form, Button } from "react-bootstrap"
 import { mostrarAlertaExito, mostrarAlertaError } from "../components/Mensajes"
 import { validarCampos } from "../components/Validaciones"
 
@@ -25,11 +25,11 @@ export default function Login(){
             navigate('/')
 
         }else if(esValidoContraseña){
-            mostrarAlertaError("Usuario ingresado inválido. No puede estar vacío.")
+            mostrarAlertaError("Usuario ingresado inválido.")
         }else if(esValidoUsuario){
-            mostrarAlertaError("Contraseña ingresada inválida. No puede estar vacía.")
+            mostrarAlertaError("Contraseña ingresada inválida.")
         }else{
-            mostrarAlertaError("Contraseña y usuario ingresados inválidos. No pueden estar vacíos.")
+            mostrarAlertaError("Contraseña y usuario ingresados inválidos.")
         }
     }
 
