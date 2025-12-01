@@ -1,7 +1,7 @@
 import {Container, Nav, Navbar} from "react-bootstrap"
 import {Link, useNavigate} from "react-router-dom"
 
-function Header() {
+export default function Header() {
 
     const navigate = useNavigate()
     const estaAutenticado = localStorage.getItem('auth') === 'true'
@@ -51,5 +51,3 @@ function Header() {
         </Navbar>
     );
 }
-
-export default Header;
