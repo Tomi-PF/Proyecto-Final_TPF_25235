@@ -1,8 +1,9 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { Form, Button } from "react-bootstrap"
+import { Form } from "react-bootstrap"
 import { mostrarAlertaExito, mostrarAlertaError } from "../components/Mensajes"
 import { validarCampos } from "../components/Validaciones"
+import Boton from "../components/Boton"
 
 export default function Login(){
 
@@ -57,9 +58,7 @@ export default function Login(){
                             onChange={(e) => setContraseña(e.target.value)}    
                         />
                     </Form.Group>
-                    <Button variant="primary" onClick={manejarLogin}>
-                        Iniciar Sesión
-                    </Button>
+                    <Boton variante={"primary"} texto={"Iniciar Sesión"} funcion={() => manejarLogin()}/>
                 </Form>
             </div>
         </section>
