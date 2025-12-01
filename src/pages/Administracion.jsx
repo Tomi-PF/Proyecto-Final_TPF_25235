@@ -104,7 +104,11 @@ export default function Administracion(){
     return(
         <div className="container mt-4">
             <h2 className="mb-4">Administración de productos</h2>
-            <Boton variante={"info"} texto={"Agregar producto"} funcion={abrirModal} />
+            <Boton 
+                variante={"info"} 
+                texto={"Agregar producto"} 
+                funcion={abrirModal}
+            />
             {
                 productos.length != 0 ? (
                     <Table striped bordered hover className="mt-4">
@@ -136,10 +140,18 @@ export default function Administracion(){
                                             </td>
                                             <td>
                                                 <span style={{marginRight: "5px"}}>
-                                                    <Boton variante={"warning"} texto={"Editar"} funcion={() => abrirModal(prod)} />    
+                                                    <Boton 
+                                                        variante={"warning"} 
+                                                        texto={"Editar"} 
+                                                        funcion={() => abrirModal(prod)} 
+                                                    />    
                                                 </span>
                                                 <span style={{marginLeft: "5px"}}>
-                                                    <Boton variante={"danger"} texto={"Eliminar"} funcion={() => eliminarProducto(prod.id)} />
+                                                    <Boton 
+                                                        variante={"danger"} 
+                                                        texto={"Eliminar"} 
+                                                        funcion={() => eliminarProducto(prod.id)} 
+                                                    />
                                                 </span>
                                             </td>
                                         </tr>
@@ -196,7 +208,12 @@ export default function Administracion(){
                             />
                         </Form.Group>
 
-                        <Boton variante={"info"} texto={"Guardar"} funcion={manejarEnvio} type="submit"/>
+                        <Boton 
+                            variante={"info"} 
+                            texto={"Guardar"} 
+                            funcion={manejarEnvio} 
+                            type="submit"
+                        />
                     </Form>
                 </Modal.Body>
             </Modal>

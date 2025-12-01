@@ -44,8 +44,6 @@ export const CartProvider = ({ children }) => {
                 eliminarCarrito,
                 vaciarCarrito
             }}
-        >
-            {children}
-        </CartContext.Provider>
+        >{children}</CartContext.Provider>
     )
 }

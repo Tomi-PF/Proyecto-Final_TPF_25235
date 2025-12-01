@@ -20,7 +20,11 @@ export default function CardProducto({producto, agregarCarrito}){
                 <ListGroup.Item>Precio: <b>${producto.precio}</b></ListGroup.Item>
             </ListGroup>
             <Card.Body>
-                <Boton variante={"primary"} texto={"Agregar al carrito"} funcion={() => agregar(producto)}/>
+                <Boton 
+                    variante={"primary"} 
+                    texto={"Agregar al carrito"} 
+                    funcion={() => agregar(producto)}
+                />
             </Card.Body>
         </Card>
     )    

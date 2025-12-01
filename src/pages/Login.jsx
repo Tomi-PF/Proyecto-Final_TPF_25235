@@ -58,7 +58,11 @@ export default function Login(){
                             onChange={(e) => setContraseña(e.target.value)}    
                         />
                     </Form.Group>
-                    <Boton variante={"primary"} texto={"Iniciar Sesión"} funcion={() => manejarLogin()}/>
+                    <Boton 
+                        variante={"primary"} 
+                        texto={"Iniciar Sesión"} 
+                        funcion={() => manejarLogin()}
+                    />
                 </Form>
             </div>
         </section>

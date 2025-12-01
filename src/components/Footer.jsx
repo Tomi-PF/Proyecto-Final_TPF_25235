@@ -10,15 +10,21 @@ export default function Footer(){
                         <p className="mb-2">Calle Falsa 123</p> 
                     </div>
                     <div className="col-6 d-flex justify-content-end">
-                        <a href="https://www.facebook.com" target="_blank" className="me-3 text-white">
-                            <ion-icon size="large" name="logo-facebook"></ion-icon>
-                        </a>
-                        <a href="https://www.instagram.com" target="_blank" className="me-3 text-white">
-                            <ion-icon size="large" name="logo-instagram"></ion-icon>
-                        </a>
-                        <a href="https://x.com" target="_blank" className="me-3 text-white">
-                            <ion-icon size="large" name="logo-twitter"></ion-icon>
-                        </a>
+                        <a 
+                            href="https://www.facebook.com" 
+                            target="_blank" 
+                            className="me-3 text-white"
+                        ><ion-icon size="large" name="logo-facebook"></ion-icon></a>
+                        <a 
+                            href="https://www.instagram.com" 
+                            target="_blank" 
+                            className="me-3 text-white"
+                            ><ion-icon size="large" name="logo-instagram"></ion-icon></a>
+                        <a 
+                            href="https://x.com" 
+                            target="_blank" 
+                            className="me-3 text-white"
+                        ><ion-icon size="large" name="logo-twitter"></ion-icon></a>
                     </div>
                 </div>
             </Container>

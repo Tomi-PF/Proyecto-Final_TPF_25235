@@ -19,7 +19,11 @@ export default function Carrito(){
     return(
         <Container className="mt-4">
             <h3>Carrito de compras</h3>
-            <Boton variante={"danger"} texto={"Vaciar carrito"} funcion={() => vaciarCarrito()}/>
+            <Boton 
+                variante={"danger"} 
+                texto={"Vaciar carrito"} 
+                funcion={() => vaciarCarrito()}
+            />
             <Table striped bordered hover responsive className="mt-3">
                 <thead>
                     <tr style={{textAlign: "center"}}>
