@@ -1,5 +1,6 @@
 #root{
     background-color: rgb(207, 207, 207);
+    min-height: 100vh;
 }
 
 /* Estilo de la descripción */
@@ -48,6 +49,7 @@
 .carousel {
     position: relative;
     max-width: 600px;
+    max-height: 600px;
     margin: 20px auto;
     overflow: hidden;
     border: 2px solid #ddd;
@@ -100,10 +102,35 @@ button.prev:hover, button.next:hover {
 
 .productos-container > div {
     flex: 1 1 200px;
-    max-width: 300px;
 }
 
-/* Estilo del formulario para iniciar sesión*/
+Card {
+    width: 18em;
+    margin-top: 10px;
+    min-height: 610px;
+}
+
+.card-imagen {
+    display: flex;
+    min-height: 350px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+}
+
+.card-text {
+    min-height: 70px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* Estilo del formulario para iniciar sesión */
 #formulario_seccion {
     max-width: 400px;
 }
@@ -149,4 +176,40 @@ button.prev:hover, button.next:hover {
 
 .formulario button:hover {
     background-color: #4c4c4c;
+}
+
+/* Estilo de footer */
+.footer {
+    position: sticky;
+    top: 100vh;
+}
+
+/* Estilo del Toast */
+.toast-container {
+    position: fixed;
+    bottom: -150px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Estilos de la sección de Administración */
+.admin-encabezado {
+    text-align: center;
+}
+
+.admin-boton-editar {
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.admin-boton-eliminar {
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+/* Estilos de la sección de Carrito */
+.carrito-encabezado {
+    text-align: center;
 }
