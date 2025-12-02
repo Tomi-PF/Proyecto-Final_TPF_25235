@@ -3,7 +3,7 @@ import { Toast, ToastContainer, Col, Row } from "react-bootstrap";
 export default function MensajeToast({producto, mostrar, setMostrar}){
 
     return(
-        <ToastContainer style={{position: "fixed", bottom: "100px", right: "20px", zIndex: 1000}}>
+        <ToastContainer className="toast-container">
             <Toast onClose={() => setMostrar(false)} show={mostrar} delay={5000} autohide>
                 <Toast.Header>
                     <img 

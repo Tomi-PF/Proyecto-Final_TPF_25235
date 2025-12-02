@@ -113,7 +113,7 @@ export default function Administracion(){
                 productos.length != 0 ? (
                     <Table striped bordered hover className="mt-4">
                         <thead>
-                            <tr>
+                            <tr className="admin-encabezado">
                                 <th>Nombre</th>
                                 <th>Descripción</th>
                                 <th>Precio</th>
@@ -134,19 +134,18 @@ export default function Administracion(){
                                                     src={prod.imagen} 
                                                     alt={prod.nombre} 
                                                     width={50} 
-                                                    height={50} 
-                                                    style={{objectFit: "cover"}}
+                                                    height={50}
                                                 />
                                             </td>
                                             <td>
-                                                <span style={{marginRight: "5px"}}>
+                                                <span className="admin-boton-editar">
                                                     <Boton 
                                                         variante={"warning"} 
                                                         texto={"Editar"} 
                                                         funcion={() => abrirModal(prod)} 
                                                     />    
                                                 </span>
-                                                <span style={{marginLeft: "5px"}}>
+                                                <span className="admin-boton-eliminar">
                                                     <Boton 
                                                         variante={"danger"} 
                                                         texto={"Eliminar"} 

@@ -26,7 +26,7 @@ export default function Carrito(){
             />
             <Table striped bordered hover responsive className="mt-3">
                 <thead>
-                    <tr style={{textAlign: "center"}}>
+                    <tr className="carrito-encabezado">
                         <th>Producto</th>
                         <th>Imagen</th>
                         <th>Precio unitario</th>
@@ -47,7 +47,6 @@ export default function Carrito(){
                                             alt={prod.nombre}
                                             width={50}
                                             height={50}
-                                            style={{objectFit: "cover"}} 
                                         />
                                     </td>
                                     <td>${Number(prod.precio).toFixed(2)}</td>
