@@ -94,10 +94,11 @@ button.prev:hover, button.next:hover {
 
 /* Estilo de las cards */
 .productos-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin: 0 10px;
 }
 
 .productos-container > div {
@@ -129,6 +130,17 @@ button.prev:hover, button.next:hover {
 
 .card-body {
     text-align: center;
+}
+
+/* Estilos de la barra de búsqueda */
+.contenedor-barra-busqueda {
+    display: flex;
+    width: 1212px;
+    justify-content: center;
+}
+
+.barra-busqueda {
+    margin-left: -97px;
 }
 
 /* Estilo del formulario para iniciar sesión */

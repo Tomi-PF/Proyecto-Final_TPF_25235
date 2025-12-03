@@ -39,13 +39,15 @@ export default function Productos(){
 
     return(
         <span>
-            <Form.Control
-                type="text"
-                placeholder="Buscar un producto"
-                className="mb-4 mt-4"
-                value={barraBusqueda}
-                onChange={(e) => setBarraBusqueda(e.target.value)}
-            />
+            <div className="contenedor-barra-busqueda">
+                <Form.Control
+                    type="text"
+                    placeholder="Buscar un producto"
+                    className="barra-busqueda mb-4 mt-4"
+                    value={barraBusqueda}
+                    onChange={(e) => setBarraBusqueda(e.target.value)}
+                />
+            </div>
 
             <div className="productos-container">
                 {
