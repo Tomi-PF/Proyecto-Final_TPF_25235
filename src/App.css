@@ -188,9 +188,9 @@ button.prev:hover, button.next:hover {
 /* Estilo del Toast */
 .toast-container {
     position: fixed;
-    bottom: -150px;
     right: 20px;
     z-index: 1000;
+    margin-top: -65px;
 }
 
 /* Estilos de la sección de Administración */
