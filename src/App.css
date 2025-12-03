@@ -104,10 +104,11 @@ button.prev:hover, button.next:hover {
     flex: 1 1 200px;
 }
 
-Card {
+.card-producto {
     width: 18em;
     margin-top: 10px;
     min-height: 610px;
+    min-width: 265px;
 }
 
 .card-imagen {
@@ -209,7 +210,31 @@ Card {
     margin-left: 5px;
 }
 
+/* Estilo del ícono de la sección Administración */
+.icono-agregar-carrito {
+    margin-right: 10px;
+}
+
 /* Estilos de la sección de Carrito */
 .carrito-encabezado {
     text-align: center;
+}
+
+/* Estilo del ícono de la sección Carrito */
+.icono-quitar-carrito {
+    margin-right: 10px;
+}
+
+/* Estilos de los íconos del Header */
+.icono-admin, .icono-carrito, .icono-cerrar-sesion, .icono-iniciar-sesion {
+    font-size: 32px;
+}
+
+/* Estilos de los íconos del Footer */
+.icono-whatsapp, .icono-facebook, .icono-instagram, .icono-x {
+    font-size: 28px;
+}
+
+.icono-whatsapp {
+    margin-right: 10px;
 }
