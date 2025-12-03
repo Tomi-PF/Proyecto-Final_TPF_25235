@@ -1,12 +1,12 @@
 import { Button } from "react-bootstrap"
 
-export default function Boton({variante, texto, funcion}){
+export default function Boton({variante, texto, funcion, icono}){
 
     return(
         <Button 
             variant={variante} 
             size="lg" 
             onClick={funcion}
-        >{texto}</Button>
+        ><i className={icono}/>{texto}</Button>
     )
 }
