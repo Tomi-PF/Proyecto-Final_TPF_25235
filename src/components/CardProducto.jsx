@@ -16,7 +16,7 @@ export default function CardProducto({producto, agregarCarrito}){
 
     return(
         <div>
-            <Card key={producto.id}>
+            <Card key={producto.id} className='card-producto'>
                 <Card.Img 
                     variant="top" 
                     src={producto.imagen} 
@@ -32,6 +32,7 @@ export default function CardProducto({producto, agregarCarrito}){
                 </ListGroup>
                 <Card.Body className='card-body'>
                     <Boton 
+                        icono={"icono-agregar-carrito bi bi-cart-plus"}
                         variante={"primary"} 
                         texto={"Agregar al carrito"} 
                         funcion={() => agregar(producto)}

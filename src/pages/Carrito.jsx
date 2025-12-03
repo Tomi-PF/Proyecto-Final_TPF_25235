@@ -54,6 +54,7 @@ export default function Carrito(){
                                     <td>${(Number(prod.precio) * prod.cantidad).toFixed(2)}</td>
                                     <td>
                                         <Boton 
+                                            icono={"icono-quitar-carrito bi bi-cart-dash"}
                                             variante={"danger"} 
                                             texto={"Eliminar"}
                                             funcion={() => eliminarCarrito(prod.id)}
