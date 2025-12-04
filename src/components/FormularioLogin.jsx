@@ -2,7 +2,7 @@ import { Form } from "react-bootstrap"
 import Boton from "./Boton"
 import CampoIngreso from "./CampoIngreso"
 
-export default function FormularioLogin({usuario, setUsuario, contraseña, setContraseña}){
+export default function FormularioLogin({usuario, setUsuario, contraseña, setContraseña, manejarLogin}){
 
     return(
         <Form className="formulario">

@@ -41,6 +41,7 @@ export default function Login(){
                     setUsuario={setUsuario}
                     contraseña={contraseña}
                     setContraseña={setContraseña}
+                    manejarLogin={manejarLogin}
                 />
             </div>
         </section>
