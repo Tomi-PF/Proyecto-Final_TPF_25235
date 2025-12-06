@@ -107,7 +107,7 @@ export default function Administracion(){
             <h2 className="mb-4">Administración de productos</h2>
             <Boton 
                 variante={"info"} 
-                texto={"Agregar producto"} 
+                texto={"Crear nuevo producto"} 
                 funcion={abrirModal}
             />
 
