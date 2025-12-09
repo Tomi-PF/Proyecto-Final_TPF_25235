@@ -10,7 +10,7 @@ export default function Administracion(){
 
     const [productos, setProductos] = useState([])
     const [mostrar, setMostrar] = useState(false)
-    const [formulario, setFormulario] = useState({nombre: "", descripcion: "", imagen: "", precio: ""})
+    const [formulario, setFormulario] = useState({nombre: "", descripcion: "", imagen: "", precio: "", stock: ""})
     const [idEditar, setIdEditar] = useState(null)
 
     const obtenerProductos = () => {
@@ -26,7 +26,7 @@ export default function Administracion(){
 
     const cerrarModal = () => {
         setMostrar(false)
-        setFormulario({nombre: "", descripcion: "", imagen: "", precio: ""})
+        setFormulario({nombre: "", descripcion: "", imagen: "", precio: "", stock: ""})
         setIdEditar(null)
     }
 
@@ -48,7 +48,8 @@ export default function Administracion(){
             nombre: formulario.nombre,
             descripcion: formulario.descripcion,
             imagen: formulario.imagen,
-            precio: Number(formulario.precio)
+            precio: Number(formulario.precio),
+            stock: Number(formulario.stock)
         }
         const metodo = idEditar ? "PUT" : "POST"
         const url = idEditar ? `${API_URL}/${idEditar}` : API_URL

@@ -9,6 +9,7 @@ export default function TablaAdministracion({productos, abrirModal, eliminarProd
                 <tr className="admin-encabezado">
                     <th>Nombre</th>
                     <th>Descripción</th>
+                    <th>Stock</th>
                     <th>Precio</th>
                     <th>Imagen</th>
                     <th>Acciones</th>
@@ -21,6 +22,7 @@ export default function TablaAdministracion({productos, abrirModal, eliminarProd
                             <tr key={prod.id}>
                                 <td>{prod.nombre}</td>
                                 <td>{prod.descripcion}</td>
+                                <td>{prod.stock}</td>
                                 <td>${Number(prod.precio).toFixed(2)}</td>
                                 <td>
                                     <img 

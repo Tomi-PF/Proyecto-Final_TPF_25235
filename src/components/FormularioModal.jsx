@@ -23,6 +23,14 @@ export default function FormularioModal({formulario, setFormulario, manejarEnvio
             />
 
             <CampoIngreso 
+                texto={"Stock"}
+                tipo={"number"}
+                valor={formulario.stock}
+                mensaje={"Ingrese el stock del producto"}
+                funcion={(e) => setFormulario({...formulario, stock: Number(e.target.value)})}
+            />
+
+            <CampoIngreso 
                 texto={"Precio"}
                 tipo={"number"}
                 valor={formulario.precio}

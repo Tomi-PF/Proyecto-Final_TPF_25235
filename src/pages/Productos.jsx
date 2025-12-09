@@ -52,7 +52,11 @@ export default function Productos(){
             <div className="productos-container">
                 {
                     productosFiltrados.map((p) => (
-                        <CardProducto producto={p} agregarCarrito={agregarCarrito}/>
+                        <CardProducto 
+                            producto={p} 
+                            agregarCarrito={agregarCarrito} 
+                            actualizarProductos={obtenerProductos}
+                        />
                     ))
                 }
             </div>
