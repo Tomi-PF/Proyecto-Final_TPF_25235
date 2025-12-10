@@ -9,7 +9,7 @@ export default function Productos(){
     const [productos, setProductos] = useState([])
     const [barraBusqueda, setBarraBusqueda] = useState("")
     const { agregarCarrito } = useContext(CartContext)
-    const API_URL="https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
+    const API_URL = "https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
 
     const obtenerProductos = () => {
         fetch(API_URL)

@@ -4,11 +4,10 @@ import Boton from './Boton'
 import MensajeToast from './MensajeToast'
 import { mostrarAlertaExito, mostrarAlertaError } from './Mensajes'
 
-const API_URL="https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
-
 export default function CardProducto({producto, agregarCarrito, actualizarProductos}){
 
     const [mostrarToast, setMostrarToast] = useState(false)
+    const API_URL = "https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
 
     const manejarAgregado = (stock, producto) => {
 

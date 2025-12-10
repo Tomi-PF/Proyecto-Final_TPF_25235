@@ -6,7 +6,7 @@ export default function Carrousel(){
     const [productos, setProductos] = useState([])
     const [indiceActual, setIndiceActual] = useState(0);
     const cantidadImagenes = productos.length;
-    const API_URL="https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
+    const API_URL = "https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
 
     useEffect(() => {
         fetch(API_URL)

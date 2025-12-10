@@ -4,15 +4,14 @@ import Boton from "../components/Boton"
 import TablaAdministracion from "../components/TablaAdministracion"
 import ModalAdministracion from "../components/ModalAdministracion"
 
-const API_URL="https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
-const formularioVacio = {nombre: "", descripcion: "", imagen: "", precio: "", stock: ""}
-
 export default function Administracion(){
 
     const [productos, setProductos] = useState([])
     const [mostrar, setMostrar] = useState(false)
     const [formulario, setFormulario] = useState(formularioVacio)
     const [idEditar, setIdEditar] = useState(null)
+    const API_URL = "https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
+    const formularioVacio = {nombre: "", descripcion: "", imagen: "", precio: "", stock: ""}
 
     const obtenerProductos = () => {
         fetch(API_URL)
