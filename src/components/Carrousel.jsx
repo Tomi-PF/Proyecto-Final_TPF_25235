@@ -6,15 +6,16 @@ export default function Carrousel(){
     const [productos, setProductos] = useState([])
     const [indiceActual, setIndiceActual] = useState(0);
     const cantidadImagenes = productos.length;
+    const API_URL = "https://692b58067615a15ff24f58f8.mockapi.io/api/v1/productos"
 
     useEffect(() => {
-        fetch('https://dummyjson.com/products')
+        fetch(API_URL)
         .then((res) => res.json())
-        .then((p) => {
-            setProductos(p.products)
+        .then((productos) => {
+            setProductos(productos)
         })
         .catch(() => {
-            mostrarAlertaError("Error al cargar las fotos de los productos")
+            mostrarAlertaError("Error al cargar los productos")
         })
     },[])
 
@@ -40,17 +41,19 @@ export default function Carrousel(){
         return () => clearInterval(intervalo)
     },[indiceActual])
 
-    return(
-        <div className="carousel">
-            <div className="carousel-images" style={{ transform: `translateX(${-indiceActual * 100}%)` }}>
-                {
-                    productos.map((prod) => (
-                        <img key={prod.id} src={prod.images[0]} alt={prod.title}/>
-                    ))
-                }
+    if(productos.length != 0){
+        return(
+            <div className="carousel">
+                <div className="carousel-images" style={{ transform: `translateX(${-indiceActual * 100}%)`}}>
+                    {
+                        productos.map((prod) => (
+                            <img key={prod.id} src={prod.imagen} alt={prod.title}/>
+                        ))
+                    }
+                </div>
+                <button className="prev" onClick={() => cambiarImagen(-1)}>&#10094;</button>
+                <button className="next" onClick={() => cambiarImagen(1)}>&#10095;</button>
             </div>
-            <button className="prev" onClick={() => cambiarImagen(-1)}>&#10094;</button>
-            <button className="next" onClick={() => cambiarImagen(1)}>&#10095;</button>
-        </div>
-    )
+        )
+    }
 }

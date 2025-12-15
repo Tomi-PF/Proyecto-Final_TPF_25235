@@ -10,7 +10,7 @@ export default function Description(){
                 la mejor experiencia de compra. Navega por nuestro catálogo digital y 
                 recibe tus artículos favoritos sin complicaciones con <b>Comprar Ya</b>.
             </p>
-            <p>🛍️ Explora nuestro catálogo y encuentra lo que buscas. 
+            <p>🛍️ Explorá nuestro catálogo y encontrá lo que buscas. 
                 ¡Tu próxima gran compra empieza aquí!
             </p>
         </div>
