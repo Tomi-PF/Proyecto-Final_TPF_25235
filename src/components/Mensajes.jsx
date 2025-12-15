@@ -15,3 +15,14 @@ export const mostrarAlertaError = (mensaje) => {
         title: "Oops..."
     })
 }
+
+export const confirmarEleccion = async (mensaje, accion) => {
+    return Swal.fire({
+        title: mensaje,
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: accion,
+    }).then((result) => {
+        return result.isConfirmed
+    });
+}
