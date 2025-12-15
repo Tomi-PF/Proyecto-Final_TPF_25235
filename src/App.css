@@ -1,5 +1,6 @@
 #root{
     background-color: rgb(207, 207, 207);
+    min-height: 100vh;
 }
 
 /* Estilo de la descripción */
@@ -48,6 +49,7 @@
 .carousel {
     position: relative;
     max-width: 600px;
+    max-height: 600px;
     margin: 20px auto;
     overflow: hidden;
     border: 2px solid #ddd;
@@ -92,22 +94,56 @@ button.prev:hover, button.next:hover {
 
 /* Estilo de las cards */
 .productos-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin: 0 10px;
 }
 
 .productos-container > div {
     flex: 1 1 200px;
-    max-width: 300px;
 }
 
-/* Estilo del formulario para iniciar sesión*/
-#formulario_seccion {
-    max-width: 400px;
+.card-producto {
+    width: 18em;
+    margin-top: 10px;
+    min-height: 610px;
+    min-width: 265px;
 }
 
+.card-imagen {
+    display: flex;
+    min-height: 350px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+}
+
+.card-text {
+    min-height: 70px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* Estilos de la barra de búsqueda */
+.contenedor-barra-busqueda {
+    display: flex;
+    width: 1212px;
+    justify-content: center;
+}
+
+.barra-busqueda {
+    margin-left: -97px;
+}
+
+/* Estilo del formulario para iniciar sesión */
 .section-login {
     display: flex;
     justify-content: center;
@@ -117,7 +153,7 @@ button.prev:hover, button.next:hover {
 
 .contenedor-formulario {
     position: relative;
-    max-width: 700px;
+    max-width: 400px;
     width: 100%;
     background-color: rgb(255, 240, 240);
     padding: 25px;
@@ -149,4 +185,64 @@ button.prev:hover, button.next:hover {
 
 .formulario button:hover {
     background-color: #4c4c4c;
+}
+
+/* Estilo de footer */
+.footer {
+    position: sticky;
+    top: 100vh;
+}
+
+/* Estilo del Toast */
+.toast-container {
+    position: fixed;
+    right: 20px;
+    z-index: 1000;
+    margin-top: -65px;
+}
+
+/* Estilos de la sección de Administración */
+.admin-encabezado {
+    text-align: center;
+}
+
+.admin-boton-editar {
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.admin-boton-eliminar {
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+/* Estilo del ícono de la sección Administración */
+.icono-agregar-carrito {
+    margin-right: 10px;
+}
+
+/* Estilos de la sección de Carrito */
+.carrito-encabezado {
+    text-align: center;
+}
+
+/* Estilo del ícono de la sección Carrito */
+.icono-quitar-carrito {
+    margin-right: 10px;
+}
+
+/* Estilos de los íconos del Header */
+.icono-admin, .icono-carrito, .icono-cerrar-sesion, .icono-iniciar-sesion {
+    font-size: 32px;
+}
+
+/* Estilos de los íconos del Footer */
+.icono-whatsapp, .icono-facebook, .icono-instagram, .icono-x {
+    font-size: 28px;
+}
+
+.icono-whatsapp {
+    margin-right: 10px;
 }
